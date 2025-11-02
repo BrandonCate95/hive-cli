@@ -18,7 +18,7 @@ Hive is a tool that simplifies the annoying parts of creating kubernetes cluster
 
 ### Unified Cluster Connections
 
-Save and share configuration files. That make it easy to authenticate and connect to clusters.
+Easy to authenticate and connect to clusters. Can save and share configuration files as well.
 
 ```sh
 hive create connection --provder aws --region us-east1 --name gke-cluster
@@ -187,3 +187,7 @@ hive create connection -f cluster_connection.yaml
 ```sh
 kubectl cluster-info
 ```
+
+### Cluster Hooks
+
+examples
