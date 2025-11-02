@@ -1,0 +1,18 @@
+# recommend to not use for production setups at first
+---
+apiVersion: hive.io/v1alpha1
+kind: ClusterVPC
+metadata:
+  name: gke-vpc
+spec:
+  provider: aws # (azure, gcp)
+  region: us-east1 # provider specific
+  network: "netork-name"
+  cidr: "network-range"
+  subnets:
+    - "subnet-1-range"
+    - "subnet-2-range"
+  firewall:
+    - ruleName: "firewall-1"
+      port: 22
+      allow: false

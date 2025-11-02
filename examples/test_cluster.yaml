@@ -1,0 +1,14 @@
+# creates test cluster with opinionated defaults for easier testing
+---
+apiVersion: hive.io/v1alpha1
+kind: TestCluster
+metadata:
+  name: gke-cluster
+spec:
+  provider: aws # (azure, gcp)
+  version: 1.31 # or default latest
+  region: us-east1 # provider specific
+  # creates standard vpc (public subnet lb, private subnet workload pods)
+  # control_plane has 1-2 autoscaling nodes (small vm sizes)
+  # load balancer is publically accessible
+  # cni is cilium

@@ -1,0 +1,13 @@
+---
+apiVersion: hive.io/v1alpha1
+kind: ClusterPreHook
+metadata:
+  name: gke-cluster
+spec:
+  type: webhook
+  url: <url>
+  method: POST
+  headers:
+    Authorization: "Bearer $YOUR_ENV_VAR"
+  body:
+    # needs more thought what is injected vs not

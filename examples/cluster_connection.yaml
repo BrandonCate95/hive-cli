@@ -1,0 +1,11 @@
+---
+apiVersion: hive.io/v1alpha1
+kind: ClusterConnection
+metadata:
+  name: gke-cluster
+spec:
+  provider: aws # (azure, gcp)
+  region: us-east1
+  clusterRef:
+    name: gke-cluster
+  # authCommand: for overriding default authentication command
